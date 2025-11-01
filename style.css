@@ -1,0 +1,381 @@
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f6fa;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin: 0 15px;
+}
+
+nav ul li a{
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: #333;
+    font-weight: 1000;
+    font-size: larger;
+    transition: 0.3s;
+}
+nav ul li a:hover{
+    color: #007bff;
+}
+nav {
+    max-width: 100%;
+    overflow-x: hidden; 
+}
+nav .id{
+    font-size: 20px;
+    color: #007bff;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    
+}
+nav h1{
+    font-size: 30px;
+    color: #000000;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    padding: 0 20px;
+}
+#home h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #007bff;
+    font-weight: 1000;
+
+}
+#home p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 100;
+
+}
+
+.course-container{
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.course-container li{
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    list-style: none;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-container li:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+#course h2 , #learnings h2 ,#about h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #007bff;
+    display: center;
+    text-align: center;
+}
+p{
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    font-weight: 1000;
+}
+
+/* Learnings Section Redesign */
+#learnings {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+#learnings h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#learnings > p {
+    text-align: center;
+    font-size: 18px;
+    color: #6c757d;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+#learnings .learnings-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#learnings .learnings-grid li {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    position: relative;
+}
+
+#learnings .learnings-grid li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #007bff, #0056b3, #007bff);
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+}
+
+#learnings .learnings-grid li:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
+}
+
+.learnings-grid li h3 {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    margin: 0;
+    padding: 25px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.learnings-grid li h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+}
+
+.learnings-grid li p {
+    background: #f8f9fa;
+    color: #495057;
+    margin: 0;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    line-height: 1.4;
+}
+
+.learnings-grid li h6 {
+    margin: 0;
+    padding: 18px 30px;
+    font-size: 15px;
+    color: #495057;
+    font-weight: 400;
+    line-height: 1.7;
+    border-bottom: 1px solid #f1f3f4;
+    position: relative;
+    padding-left: 50px;
+    transition: all 0.3s ease;
+}
+
+.learnings-grid li h6::before {
+    content: '▶';
+    position: absolute;
+    left: 25px;
+    top: 18px;
+    color: #007bff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.learnings-grid li h6:hover {
+    background: rgba(0, 123, 255, 0.05);
+    color: #007bff;
+    padding-left: 55px;
+}
+
+.learnings-grid li h6:last-child {
+    border-bottom: none;
+    background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+    color: #2e7d32;
+    font-weight: 500;
+    border-radius: 0 0 20px 20px;
+}
+
+.learnings-grid li h6:last-child::before {
+    content: '✓';
+    color: #28a745;
+    font-weight: bold;
+    font-size: 16px;
+}
+.learnings-grid img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+section{
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+section:not(:first-of-type){
+    margin-top: 10px;
+}   
+
+
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+footer p{
+    margin: 0;
+    font-size: 14px;
+}
+@media (max-width: 768px){
+    .course-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Learnings responsive design */
+    #learnings {
+        padding: 40px 15px;
+    }
+    
+    #learnings h2 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    #learnings > p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+    
+    #learnings .learnings-grid{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .learnings-grid li h3 {
+        font-size: 20px;
+        padding: 20px 25px;
+    }
+    
+    .learnings-grid li p {
+        font-size: 16px;
+        padding: 15px 25px;
+    }
+    
+    .learnings-grid li h6 {
+        font-size: 14px;
+        padding: 15px 25px;
+        padding-left: 45px;
+    }
+    
+    .learnings-grid li h6::before {
+        left: 20px;
+        top: 15px;
+    }
+    
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li{
+        margin: 10px 0;             
+    }
+}   
